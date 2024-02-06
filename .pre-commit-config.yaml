@@ -1,0 +1,15 @@
+repos:
+  - repo: local # localmente
+    hooks: #ação
+      - id: pylint
+        name: pylint
+        entry: pylint # essa ação vai ser executada através da propriedade entry, a biblioteca do pylint pra tentar verificar algum erro captado por ele
+        language: system
+        types: [python]
+        args:
+          [
+            "-rn", # Only display messages
+            "-sn", # Don't display the source
+            "--rcfile=.pylintrc", # Link to your config file
+            "--load-plugins=pylint.extensions.docparams", # Load an extension
+          ]
