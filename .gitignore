@@ -1,2 +1,5 @@
 **/__pycache__
+.pytest_cache
 .venv
+validator_raw.py
+run_raw.py

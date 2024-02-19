@@ -8,7 +8,7 @@ class TagCreatorView:
     '''
 
     def validate_and_create(self, http_request: HttpRequest)  -> HttpResponse:
-        tag_creator_controller  =TagCreatorController()
+        tag_creator_controller = TagCreatorController()
 
         body = http_request.body
         product_code = body["product_code"]
